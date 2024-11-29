@@ -20,6 +20,7 @@ reply(`${e}`)
 
 cmd({
     pattern: "owner",
+    alias: ["sihilel"],
     desc: "Contact bot creater",
     category: "main",
     filename: __filename
