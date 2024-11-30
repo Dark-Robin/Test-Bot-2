@@ -44,9 +44,9 @@ reply(`${e}`)
 
 cmd({
     pattern: "sihilel",
-    alias: ["isara","dissanayake"],
+    alias: ["isara","dissanayake","සිහිලැල්"],
     desc: "Contact bot creater",
-    category: "main",
+    category: "robin",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
@@ -67,7 +67,7 @@ cmd({
     pattern: "lakshi",
     alias: ["ලක්ෂි"],
     desc: "Contact bot creater",
-    category: "main",
+    category: "robin",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
@@ -86,9 +86,9 @@ reply(`${e}`)
 
 cmd({
     pattern: "rukshani",
-    alias: ["රුක්ශානි"],
+    alias: ["රුක්ෂානි"],
     desc: "Contact bot creater",
-    category: "main",
+    category: "robin",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
