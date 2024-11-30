@@ -18,6 +18,8 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             return reply("Sorry, I couldn't fetch the video. Please make sure the link is valid.");
         }
 
+        console.log('Video Data:', videoData);
+
         // Prepare the description for the response
         let desc = `
 *❤️ROBIN Facebook Video Downloader❤️*
