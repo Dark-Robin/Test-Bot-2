@@ -1,55 +1,47 @@
 const { cmd, commands } = require('../command');
-const { getMovie } = require('mrnima-moviedl'); // Import the specific function
+const { sinhalaSub } = require("mrnima-moviedl");
 
 cmd({
     pattern: "movie",
-    desc: "Download Movies",
+    desc: "Download Sinhala Subtitle for Movies",
     category: "download",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
-        // Check if a movie name is provided
-        if (!q) return reply("*Please provide a valid movie name or link* 🌚❤️");
+        if (!q) return reply("*Please provide a valid movie name for Sinhala subtitles* 🌚❤️");
 
-        // Fetch movie details
-        const movieData = await getMovie(q); // Directly call the getMovie function
+        // Fetch Sinhala subtitle
+        const subtitleData = await sinhalaSub(q);
 
-        // Validate if the movie details are found
-        if (!movieData || !movieData.downloadUrl) {
-            return reply("Sorry, I couldn't find the movie. Please check the name or link and try again.");
+        if (!subtitleData || !subtitleData.downloadUrl) {
+            return reply("Sorry, I couldn't find subtitles for the given movie. Please check the name and try again.");
         }
 
-        console.log('Movie Data:', movieData); // Debug output
-
-        // Prepare the description for the response
         let desc = `
-*❤️ROBIN Movie Downloader❤️*
+*❤️ROBIN Sinhala Subtitle Downloader❤️*
 
-🎬 *Title* : ${movieData.title}
-📅 *Release Year* : ${movieData.year}
-⭐ *Rating* : ${movieData.rating}
-🎥 *Quality* : ${movieData.quality}
-🔗 *Link* : ${movieData.downloadUrl}
+🎬 *Movie Title* : ${subtitleData.title || "Unknown"}
+📂 *File Type* : ${subtitleData.fileType || "Unknown"}
+🔗 *Download Link* : ${subtitleData.downloadUrl}
 
 𝐌𝐚𝐝𝐞 𝐛𝐲 𝐒_𝐈_𝐇_𝐈_𝐋_𝐄_𝐋
         `;
 
-        // Send the movie details to the user
+        // Send a text message with subtitle information
         await conn.sendMessage(from, { text: desc }, { quoted: mek });
 
-        // Send the download link
+        // Send the subtitle file as a document
         await conn.sendMessage(from, {
-            document: { url: movieData.downloadUrl },
+            document: { url: subtitleData.downloadUrl },
             mimetype: "application/octet-stream",
-            fileName: `${movieData.title}.mp4`,
-            caption: "Click the link above to download the movie 🎥"
+            fileName: `${subtitleData.title || "subtitle"}.srt`,
+            caption: "Download and enjoy your Sinhala subtitle 🌟"
         }, { quoted: mek });
 
         return reply("*Thanks for using my bot* 🌚❤️");
-
     } catch (e) {
-        console.error('Error:', e); // Log detailed error
+        console.error('Error:', e);
         reply(`Error: ${e.message}`);
     }
 });
