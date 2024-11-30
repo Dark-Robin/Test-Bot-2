@@ -8,7 +8,7 @@ cmd({
     category: "download",
     filename: __filename
 },
-async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, reply }) => {
+async (conn, mek, m, { from, quoted, body, args, q, reply }) => {
     try {
         if (!q || !q.startsWith('http')) {
             return reply("*Please provide a valid direct download link!* 🌚❤️");
@@ -25,11 +25,15 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
         reply(`*Downloading file...*`);
 
-        // Download the file
+        // Download the file with headers
         const response = await axios({
             method: 'GET',
             url: fileUrl,
             responseType: 'stream',
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36',
+                'Referer': 'https://sinhalasub.lk/', // Example referer, change based on your source
+            },
         });
 
         // Save the file locally
