@@ -32,7 +32,7 @@ async (conn, mek, m, { from, quoted, body, args, q, reply }) => {
             responseType: 'stream',
             headers: {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36',
-                'Referer': 'https://sinhalasub.lk/', // Example referer, change based on your source
+                'Referer': 'https://ssl.sinhalasub01.workers.dev/', // Example referer, change based on your source
             },
         });
 
