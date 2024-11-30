@@ -12,6 +12,9 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 if(!q) return reply("*නමක් හරි ලින්ක් එකක් හරි දෙන්න* 🌚❤️")
+const isReact = m.message.reactionMessage ? true : false
+if(isReact) return 
+m.react("🎵")
 const search = await yts(q)
 const data = search.videos[0];
 const url = data.url
@@ -56,6 +59,9 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 if(!q) return reply("නමක් හරි ලින්ක් එකක් හරි දෙන්න 🌚❤️")
+const isReact = m.message.reactionMessage ? true : false
+if(isReact) return 
+m.react("📽️")
 const search = await yts(q)
 const data = search.videos[0];
 const url = data.url
