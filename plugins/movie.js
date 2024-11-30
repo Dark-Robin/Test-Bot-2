@@ -29,6 +29,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         response += "Please choose the number to download subtitles 🌟";
 
         // Send the search results
+        await conn.sendMessage(from, {document: { url: result.link },mimetype: "video/mp4",fileName: result.title + ".mp4",caption: "𝐌𝐚𝐝𝐞 𝐛𝐲 𝐒_𝐈_𝐇_𝐈_𝐋_𝐄_𝐋"},{quoted:mek})
         await conn.sendMessage(from, { text: response }, { quoted: mek });
 
         return reply("*Thanks for using my bot* 🌚❤️");
