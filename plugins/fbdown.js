@@ -1,6 +1,7 @@
 const { cmd, commands } = require('../command');
 const fbDownloader = require('fb-video-downloader');
 
+
 cmd({
     pattern: "fb",
     desc: "Download Facebook Video",
@@ -12,7 +13,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         if (!q) return reply("*Please provide a valid Facebook video link* 🌚❤️");
 
         // Use the downloader to fetch video data
-        const videoData = await fbDownloader(q);
+        const videoData = await new fbDownloader(q);
 
         if (!videoData || !videoData.url) {
             return reply("Sorry, I couldn't fetch the video. Please make sure the link is valid.");
