@@ -81,7 +81,8 @@ let downloadUrl = down.dl_url
 //send audio message
 await conn.sendMessage(from,{video: {url:downloadUrl},mimetype:"video/mp4"},{quoted:mek})
 await conn.sendMessage(from, {document: { url: downloadUrl },mimetype: "video/mp4",fileName: data.title + ".mp4",caption: "𝐌𝐚𝐝𝐞 𝐛𝐲 𝐒_𝐈_𝐇_𝐈_𝐋_𝐄_𝐋"},{quoted:mek})
-
+return reply("*Thanks for using my bot* 🌚❤️")
+    
 }catch(e){
   console.log(e)
   reply(`${e}`)
