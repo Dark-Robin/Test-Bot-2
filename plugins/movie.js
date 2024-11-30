@@ -1,5 +1,5 @@
 const { cmd, commands } = require('../command');
-const MovieDL = require('mrnima-moviedl');
+const { getMovie } = require('mrnima-moviedl'); // Import the specific function
 
 cmd({
     pattern: "movie",
@@ -12,11 +12,8 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         // Check if a movie name is provided
         if (!q) return reply("*Please provide a valid movie name or link* 🌚❤️");
 
-        // Initialize the MovieDL library
-        const movieDownloader = new MovieDL();
-
         // Fetch movie details
-        const movieData = await movieDownloader.getMovie(q);
+        const movieData = await getMovie(q); // Directly call the getMovie function
 
         // Validate if the movie details are found
         if (!movieData || !movieData.downloadUrl) {
