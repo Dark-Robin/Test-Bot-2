@@ -1,5 +1,5 @@
 const { cmd, commands } = require('../command');
-const fg = require('facebook-video-downloader');
+const fg = require('fb-video-downloader');
 
 cmd({
     pattern: "fb",
