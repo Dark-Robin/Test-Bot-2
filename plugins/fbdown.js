@@ -32,7 +32,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         `;
 
         // Send thumbnail image
-        await conn.sendMessage(from, { image: { url: videoData.thumbnail }, caption: desc }, { quoted: mek });
+    
 
         // Send video message
         await conn.sendMessage(from, { video: { url: videoData.video_url }, mimetype: "video/mp4" }, { quoted: mek });
