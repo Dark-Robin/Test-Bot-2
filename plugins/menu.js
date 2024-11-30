@@ -29,13 +29,19 @@ let madeMenu = `👋 *Hello  ${pushname}*
 
 
 | *MAIN COMMANDS* |
-${menu.main}
+    ▫️.alive
+    ▫️.menu
+    ▫️.ai {text}
+    ▫️.system
+    ▫️.owner
 | *DOWNLOAD COMMANDS* |
-${menu.download}
+    ▫️.song {text}
+    ▫️.video {text}
 | *GROUP COMMANDS* |
 ${menu.group}
 | *OWNER COMMANDS* |
-${menu.owner}
+    ▫️.restart
+    ▫️.update
 | *CONVERT COMMANDS* |
 ${menu.convert}
 | *SEARCH COMMANDS* |
