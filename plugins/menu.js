@@ -24,6 +24,9 @@ if (commands[i].pattern && !commands[i].dontAddCommandList) {
 menu[commands[i].category] += `${config.PREFIX}${commands[i].pattern}\n`;
  }
 }
+const isReact = m.message.reactionMessage ? true : false
+if(isReact) return 
+m.react("📚")
 
 let madeMenu = `👋 *Hello  ${pushname}*
 
