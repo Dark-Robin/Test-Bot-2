@@ -58,3 +58,22 @@ console.log(e)
 reply(`${e}`)
 }
 })
+
+
+conn.ev.on("messages.upsert", async (msg) => {
+    const m = msg.messages[0];
+    if (!m.message || m.key.fromMe) return;
+
+    const from = m.key.remoteJid;
+    const text = m.message.conversation || m.message.extendedTextMessage?.text;
+
+    // AI ChatGPT Trigger (adjust this condition as needed)
+    if (text.startsWith("!ai ")) {
+        const query = text.slice(4); // Remove "!ai " prefix
+        const reply = await getChatGPTResponse(query);
+        await conn.sendMessage(from, { text: reply }, { quoted: m });
+    } else {
+        // Existing auto-reply or other logic
+        // No changes here
+    }
+});
