@@ -18,6 +18,7 @@ const util = require('util')
 const { sms,downloadMediaMessage } = require('./lib/msg')
 const axios = require('axios')
 const { File } = require('megajs')
+const { getChatGPTResponse } = require("./chatgpt");
 
 const ownerNumber = ['94704101989']
 
