@@ -10,24 +10,22 @@ cmd({
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-        if (!quoted || !quoted.imageMessage) {
+          // Check if the message is a reply to an image
+        if (!quoted || !quoted.message || !quoted.message.imageMessage) {
             return reply("Please reply to an image to convert it to a URL.");
         }
 
-        // Download the image file
-        const media = await conn.downloadMediaMessage(quoted);
-        const filePath = `./temp/${Date.now()}.jpg`;
+        // Download the image from the message
+        const media = await conn.downloadAndSaveMediaMessage(quoted, './temp'); // Saves to temp folder
+        const filePath = media;
 
-        // Save the file temporarily
-        fs.writeFileSync(filePath, media);
-
-        // Convert the image to a URL
+        // Convert the image to a URL using the @blackamda/telegram-image-url library
         const imageUrl = await imageToURL(filePath);
 
-        // Delete the temporary file
+        // Delete the temporary file after upload
         fs.unlinkSync(filePath);
 
-        // Send the image URL to the user
+        // Respond with the generated URL
         reply(`Here is your image URL: ${imageUrl}`);
     } catch (e) {
         console.error(e);
