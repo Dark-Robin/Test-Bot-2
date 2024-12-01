@@ -9,12 +9,16 @@ async function getFacebookVideoUrl(url) {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
       },
     });
+    // Log the HTML for debugging
+    console.log(response.data);
+
     const $ = cheerio.load(response.data);
     const videoTag = $('meta[property="og:video:url"]').attr('content');
+
     if (videoTag) {
       return videoTag;
     } else {
-      throw new Error('No video found on the provided Facebook URL.');
+      throw new Error('No video found on the provided Facebook URL. Please check if the video is public.');
     }
   } catch (error) {
     throw new Error(`Error fetching video URL: ${error.message}`);
@@ -32,7 +36,6 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
     if (!q) return reply('*Please provide a Facebook video link* 🌚❤️');
     const videoUrl = await getFacebookVideoUrl(q);
     if (videoUrl) {
-      // Send the video URL to the user
       await conn.sendMessage(from, { video: { url: videoUrl }, caption: '🎥 Facebook video downloaded' }, { quoted: mek });
       return reply('*Thanks for using my bot* 🌚❤️');
     }
