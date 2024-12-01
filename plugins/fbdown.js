@@ -32,7 +32,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
     
     // Extract video ID from the provided URL or pass as is
     const videoId = q.split('/').pop(); // Simple extraction logic (adjust as needed)
-    const accessToken = 'YOUR_ACCESS_TOKEN'; // Replace with a secure way to handle tokens
+    const accessToken = '1303353127493891|xcmNhXd7HQK2_yey6QP_wZ0rwn8'; // Replace with a secure way to handle tokens
 
     const videoUrl = await getFacebookVideoUrl(videoId, accessToken);
     
