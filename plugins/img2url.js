@@ -3,13 +3,13 @@ const { imageToURL } = require('@blackamda/telegram-image-url');
 const fs = require('fs');
 
 cmd({
-    pattern: "uploadimage",
+    pattern: "link",
     desc: "Convert image to URL",
-    category: "tools",
+    category: "convert",
     filename: __filename
 },
-async (conn, mek, m, { from, quoted, body, args, reply }) => {
-    try {
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
         if (!quoted || !quoted.imageMessage) {
             return reply("Please reply to an image to convert it to a URL.");
         }
