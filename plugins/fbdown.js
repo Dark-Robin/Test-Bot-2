@@ -1,24 +1,19 @@
 const { cmd } = require('../command');
 const axios = require('axios');
-const cheerio = require('cheerio');
 
-async function getFacebookVideoUrl(url) {
+async function getFacebookVideoUrl(videoId, accessToken) {
   try {
-    const response = await axios.get(url, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
+    const response = await axios.get(`https://graph.facebook.com/${videoId}`, {
+      params: {
+        fields: 'source,description',
+        access_token: accessToken,
       },
     });
-    // Log the HTML for debugging
-    console.log(response.data);
 
-    const $ = cheerio.load(response.data);
-    const videoTag = $('meta[property="og:video:url"]').attr('content');
-
-    if (videoTag) {
-      return videoTag;
+    if (response.data && response.data.source) {
+      return response.data.source; // Video URL
     } else {
-      throw new Error('No video found on the provided Facebook URL. Please check if the video is public.');
+      throw new Error('No video found or unable to retrieve video.');
     }
   } catch (error) {
     throw new Error(`Error fetching video URL: ${error.message}`);
@@ -33,14 +28,20 @@ cmd({
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
   try {
-    if (!q) return reply('*Please provide a Facebook video link* 🌚❤️');
-    const videoUrl = await getFacebookVideoUrl(q);
+    if (!q) return reply('*Please provide a Facebook video ID or URL* 🌚❤️');
+    
+    // Extract video ID from the provided URL or pass as is
+    const videoId = q.split('/').pop(); // Simple extraction logic (adjust as needed)
+    const accessToken = 'YOUR_ACCESS_TOKEN'; // Replace with a secure way to handle tokens
+
+    const videoUrl = await getFacebookVideoUrl(videoId, accessToken);
+    
     if (videoUrl) {
       await conn.sendMessage(from, { video: { url: videoUrl }, caption: '🎥 Facebook video downloaded' }, { quoted: mek });
       return reply('*Thanks for using my bot* 🌚❤️');
     }
   } catch (e) {
     console.log(e);
-    reply(`${e}`);
+    reply(`Error: ${e.message}`);
   }
 });
