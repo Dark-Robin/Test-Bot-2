@@ -20,7 +20,7 @@ const data = search.videos[0];
 const url = data.url
 
 let desc = `
-*❤️ROBIN Song Downloader❤️*
+*❤️ROBIN SONG DOWNLOADER❤️*
 
 👻 *title* : ${data.title}
 👻 *description* : ${data.description}
