@@ -29,7 +29,5 @@
     "fb-video-downloader": "1.0.3",
     "mrnima-moviedl": "1.0.0",
     "@blackamda/telegram-image-url": "1.0.0",
-    "cheerio": "1.0.0",
-    "dotenv": "^16.0.0"
   }
 }
