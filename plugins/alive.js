@@ -38,7 +38,7 @@ const config = await readEnv();
 const isReact = m.message.reactionMessage ? true : false
 if(isReact) return 
 m.react("🤩")
-let madeOwner = `*𝐀𝐡𝐡 𝐡𝐚 𝐲𝐨𝐮 𝐮𝐬𝐞𝐝 𝐨𝐰𝐧𝐞𝐫 𝐜𝐨𝐦𝐦𝐚𝐧𝐝* 😘\n\n *𝐌𝐲 𝐍𝐚𝐦𝐞 𝐢𝐬 𝐚 𝐑_𝐎_𝐁_𝐈_𝐍* ⚡\n\n *𝐌𝐲 𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐢𝐬 𝐒𝐈𝐇𝐈𝐋𝐄𝐋* 💀\n\n *𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐧𝐮𝐦𝐛𝐞𝐫 𝐥𝐢𝐧𝐤*\n\n *wa.me/message/WKGLBR2PCETWD1*\n\n*𝐘𝐨𝐮 𝐜𝐚𝐧 𝐣𝐨𝐢𝐧 𝐨𝐮𝐫 𝐰𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐠𝐫𝐨𝐮𝐩 𝐭𝐨 𝐜𝐡𝐞𝐜𝐤 𝐭𝐡𝐞 𝐛𝐨𝐭*\n\n*https://chat.whatsapp.com/CGQkarVNtYH2WIED9DpYSr*\n\n*𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐧𝐨𝐭𝐞* :-\n\n*𝐒𝐩𝐞𝐜𝐢𝐚𝐥 𝐭𝐡𝐚𝐧𝐤𝐬 𝐭𝐨 𝐦𝐲 𝐭𝐰𝐨 𝐬𝐢𝐬𝐭𝐞𝐫𝐬 𝐋𝐀𝐊𝐒𝐇𝐈 & 𝐑𝐔𝐊𝐒𝐇𝐀𝐍𝐈* ❤️❤️`
+let madeOwner = `*𝐀𝐡𝐡 𝐡𝐚 𝐲𝐨𝐮 𝐮𝐬𝐞𝐝 𝐨𝐰𝐧𝐞𝐫 𝐜𝐨𝐦𝐦𝐚𝐧𝐝* 😘\n\n *𝐌𝐲 𝐍𝐚𝐦𝐞 𝐢𝐬 𝐚 𝐑_𝐎_𝐁_𝐈_𝐍* ⚡\n\n *𝐌𝐲 𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐢𝐬 𝐒𝐈𝐇𝐈𝐋𝐄𝐋* 💀\n\n *𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐧𝐮𝐦𝐛𝐞𝐫 𝐥𝐢𝐧𝐤*\n\n *wa.me/message/WKGLBR2PCETWD1*\n\n*𝐘𝐨𝐮 𝐜𝐚𝐧 𝐣𝐨𝐢𝐧 𝐨𝐮𝐫 𝐰𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐠𝐫𝐨𝐮𝐩 𝐭𝐨 𝐜𝐡𝐞𝐜𝐤 𝐭𝐡𝐞 𝐛𝐨𝐭*\n\n*https://chat.whatsapp.com/GAOhr0qNK7KEvJwbenGivZ*\n\n*𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐧𝐨𝐭𝐞* :-\n\n*𝐒𝐩𝐞𝐜𝐢𝐚𝐥 𝐭𝐡𝐚𝐧𝐤𝐬 𝐭𝐨 𝐦𝐲 𝐭𝐰𝐨 𝐬𝐢𝐬𝐭𝐞𝐫𝐬 𝐋𝐀𝐊𝐒𝐇𝐈 & 𝐑𝐔𝐊𝐒𝐇𝐀𝐍𝐈* ❤️❤️`
 await conn.sendPresenceUpdate('recording', from);
 await conn.sendMessage(from, { audio: { url: "https://github.com/Dark-Robin/Bot-Helper/raw/refs/heads/main/autovoice/Owner.mp3" }, mimetype: 'audio/mpeg', ptt: true }, { quoted: mek });
 await conn.sendMessage(from,{image: {url: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/Bot%20robin%20create.jpg"},caption:madeOwner},{quoted: mek})
@@ -62,7 +62,7 @@ const config = await readEnv();
 const isReact = m.message.reactionMessage ? true : false
 if(isReact) return 
 m.react("🤩")
-let madeOwner = `*𝐀𝐡𝐡 𝐡𝐚 𝐲𝐨𝐮 𝐮𝐬𝐞𝐝 𝐨𝐰𝐧𝐞𝐫 𝐜𝐨𝐦𝐦𝐚𝐧𝐝* 😘\n\n *𝐌𝐲 𝐍𝐚𝐦𝐞 𝐢𝐬 𝐚 𝐑_𝐎_𝐁_𝐈_𝐍* ⚡\n\n *𝐌𝐲 𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐢𝐬 𝐒𝐈𝐇𝐈𝐋𝐄𝐋* 💀\n\n *𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐧𝐮𝐦𝐛𝐞𝐫 𝐥𝐢𝐧𝐤*\n\n *wa.me/message/WKGLBR2PCETWD1*\n\n*𝐘𝐨𝐮 𝐜𝐚𝐧 𝐣𝐨𝐢𝐧 𝐨𝐮𝐫 𝐰𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐠𝐫𝐨𝐮𝐩 𝐭𝐨 𝐜𝐡𝐞𝐜𝐤 𝐭𝐡𝐞 𝐛𝐨𝐭*\n\n*https://chat.whatsapp.com/CGQkarVNtYH2WIED9DpYSr*\n\n*𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐧𝐨𝐭𝐞* :-\n\n*𝐒𝐩𝐞𝐜𝐢𝐚𝐥 𝐭𝐡𝐚𝐧𝐤𝐬 𝐭𝐨 𝐦𝐲 𝐭𝐰𝐨 𝐬𝐢𝐬𝐭𝐞𝐫𝐬 𝐋𝐀𝐊𝐒𝐇𝐈 & 𝐑𝐔𝐊𝐒𝐇𝐀𝐍𝐈* ❤️❤️`
+let madeOwner = `*𝐀𝐡𝐡 𝐡𝐚 𝐲𝐨𝐮 𝐮𝐬𝐞𝐝 𝐨𝐰𝐧𝐞𝐫 𝐜𝐨𝐦𝐦𝐚𝐧𝐝* 😘\n\n *𝐌𝐲 𝐍𝐚𝐦𝐞 𝐢𝐬 𝐚 𝐑_𝐎_𝐁_𝐈_𝐍* ⚡\n\n *𝐌𝐲 𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐢𝐬 𝐒𝐈𝐇𝐈𝐋𝐄𝐋* 💀\n\n *𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐧𝐮𝐦𝐛𝐞𝐫 𝐥𝐢𝐧𝐤*\n\n *wa.me/message/WKGLBR2PCETWD1*\n\n*𝐘𝐨𝐮 𝐜𝐚𝐧 𝐣𝐨𝐢𝐧 𝐨𝐮𝐫 𝐰𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐠𝐫𝐨𝐮𝐩 𝐭𝐨 𝐜𝐡𝐞𝐜𝐤 𝐭𝐡𝐞 𝐛𝐨𝐭*\n\n*https://chat.whatsapp.com/GAOhr0qNK7KEvJwbenGivZ*\n\n*𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐧𝐨𝐭𝐞* :-\n\n*𝐒𝐩𝐞𝐜𝐢𝐚𝐥 𝐭𝐡𝐚𝐧𝐤𝐬 𝐭𝐨 𝐦𝐲 𝐭𝐰𝐨 𝐬𝐢𝐬𝐭𝐞𝐫𝐬 𝐋𝐀𝐊𝐒𝐇𝐈 & 𝐑𝐔𝐊𝐒𝐇𝐀𝐍𝐈* ❤️❤️`
 await conn.sendPresenceUpdate('recording', from);
 await conn.sendMessage(from, { audio: { url: "https://github.com/Dark-Robin/Bot-Helper/raw/refs/heads/main/autovoice/Sihilel.mp3" }, mimetype: 'audio/mpeg', ptt: true }, { quoted: mek });
 await conn.sendMessage(from,{image: {url: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/Bot%20robin%20create.jpg"},caption:madeOwner},{quoted: mek})
@@ -86,7 +86,7 @@ const config = await readEnv();
 const isReact = m.message.reactionMessage ? true : false
 if(isReact) return 
 m.react("🤩")
-let madeOwner = `*𝐀𝐡𝐡 𝐡𝐚 𝐲𝐨𝐮 𝐮𝐬𝐞𝐝 𝐨𝐰𝐧𝐞𝐫 𝐜𝐨𝐦𝐦𝐚𝐧𝐝* 😘\n\n *𝐌𝐲 𝐍𝐚𝐦𝐞 𝐢𝐬 𝐚 𝐑_𝐎_𝐁_𝐈_𝐍* ⚡\n\n *𝐌𝐲 𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐢𝐬 𝐒𝐈𝐇𝐈𝐋𝐄𝐋* 💀\n\n *𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐧𝐮𝐦𝐛𝐞𝐫 𝐥𝐢𝐧𝐤*\n\n *wa.me/message/WKGLBR2PCETWD1*\n\n*𝐘𝐨𝐮 𝐜𝐚𝐧 𝐣𝐨𝐢𝐧 𝐨𝐮𝐫 𝐰𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐠𝐫𝐨𝐮𝐩 𝐭𝐨 𝐜𝐡𝐞𝐜𝐤 𝐭𝐡𝐞 𝐛𝐨𝐭*\n\n*https://chat.whatsapp.com/CGQkarVNtYH2WIED9DpYSr*\n\n*𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐧𝐨𝐭𝐞* :-\n\n*𝐒𝐩𝐞𝐜𝐢𝐚𝐥 𝐭𝐡𝐚𝐧𝐤𝐬 𝐭𝐨 𝐦𝐲 𝐭𝐰𝐨 𝐬𝐢𝐬𝐭𝐞𝐫𝐬 𝐋𝐀𝐊𝐒𝐇𝐈 & 𝐑𝐔𝐊𝐒𝐇𝐀𝐍𝐈* ❤️❤️`
+let madeOwner = `*𝐀𝐡𝐡 𝐡𝐚 𝐲𝐨𝐮 𝐮𝐬𝐞𝐝 𝐨𝐰𝐧𝐞𝐫 𝐜𝐨𝐦𝐦𝐚𝐧𝐝* 😘\n\n *𝐌𝐲 𝐍𝐚𝐦𝐞 𝐢𝐬 𝐚 𝐑_𝐎_𝐁_𝐈_𝐍* ⚡\n\n *𝐌𝐲 𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐢𝐬 𝐒𝐈𝐇𝐈𝐋𝐄𝐋* 💀\n\n *𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐧𝐮𝐦𝐛𝐞𝐫 𝐥𝐢𝐧𝐤*\n\n *wa.me/message/WKGLBR2PCETWD1*\n\n*𝐘𝐨𝐮 𝐜𝐚𝐧 𝐣𝐨𝐢𝐧 𝐨𝐮𝐫 𝐰𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐠𝐫𝐨𝐮𝐩 𝐭𝐨 𝐜𝐡𝐞𝐜𝐤 𝐭𝐡𝐞 𝐛𝐨𝐭*\n\n*https://chat.whatsapp.com/GAOhr0qNK7KEvJwbenGivZ*\n\n*𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐧𝐨𝐭𝐞* :-\n\n*𝐒𝐩𝐞𝐜𝐢𝐚𝐥 𝐭𝐡𝐚𝐧𝐤𝐬 𝐭𝐨 𝐦𝐲 𝐭𝐰𝐨 𝐬𝐢𝐬𝐭𝐞𝐫𝐬 𝐋𝐀𝐊𝐒𝐇𝐈 & 𝐑𝐔𝐊𝐒𝐇𝐀𝐍𝐈* ❤️❤️`
 await conn.sendPresenceUpdate('recording', from);
 await conn.sendMessage(from, { audio: { url: "https://github.com/Dark-Robin/Bot-Helper/raw/refs/heads/main/autovoice/I%20love%20you.mp3" }, mimetype: 'audio/mpeg', ptt: true }, { quoted: mek });
 await conn.sendMessage(from,{image: {url: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/Bot%20robin%20create.jpg"},caption:madeOwner},{quoted: mek})
@@ -110,7 +110,7 @@ const config = await readEnv();
 const isReact = m.message.reactionMessage ? true : false
 if(isReact) return 
 m.react("🤩")
-let madeOwner = `*𝐀𝐡𝐡 𝐡𝐚 𝐲𝐨𝐮 𝐮𝐬𝐞𝐝 𝐨𝐰𝐧𝐞𝐫 𝐜𝐨𝐦𝐦𝐚𝐧𝐝* 😘\n\n *𝐌𝐲 𝐍𝐚𝐦𝐞 𝐢𝐬 𝐚 𝐑_𝐎_𝐁_𝐈_𝐍* ⚡\n\n *𝐌𝐲 𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐢𝐬 𝐒𝐈𝐇𝐈𝐋𝐄𝐋* 💀\n\n *𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐧𝐮𝐦𝐛𝐞𝐫 𝐥𝐢𝐧𝐤*\n\n *wa.me/message/WKGLBR2PCETWD1*\n\n*𝐘𝐨𝐮 𝐜𝐚𝐧 𝐣𝐨𝐢𝐧 𝐨𝐮𝐫 𝐰𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐠𝐫𝐨𝐮𝐩 𝐭𝐨 𝐜𝐡𝐞𝐜𝐤 𝐭𝐡𝐞 𝐛𝐨𝐭*\n\n*https://chat.whatsapp.com/CGQkarVNtYH2WIED9DpYSr*\n\n*𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐧𝐨𝐭𝐞* :-\n\n*𝐒𝐩𝐞𝐜𝐢𝐚𝐥 𝐭𝐡𝐚𝐧𝐤𝐬 𝐭𝐨 𝐦𝐲 𝐭𝐰𝐨 𝐬𝐢𝐬𝐭𝐞𝐫𝐬 𝐋𝐀𝐊𝐒𝐇𝐈 & 𝐑𝐔𝐊𝐒𝐇𝐀𝐍𝐈* ❤️❤️`
+let madeOwner = `*𝐀𝐡𝐡 𝐡𝐚 𝐲𝐨𝐮 𝐮𝐬𝐞𝐝 𝐨𝐰𝐧𝐞𝐫 𝐜𝐨𝐦𝐦𝐚𝐧𝐝* 😘\n\n *𝐌𝐲 𝐍𝐚𝐦𝐞 𝐢𝐬 𝐚 𝐑_𝐎_𝐁_𝐈_𝐍* ⚡\n\n *𝐌𝐲 𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐢𝐬 𝐒𝐈𝐇𝐈𝐋𝐄𝐋* 💀\n\n *𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐧𝐮𝐦𝐛𝐞𝐫 𝐥𝐢𝐧𝐤*\n\n *wa.me/message/WKGLBR2PCETWD1*\n\n*𝐘𝐨𝐮 𝐜𝐚𝐧 𝐣𝐨𝐢𝐧 𝐨𝐮𝐫 𝐰𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐠𝐫𝐨𝐮𝐩 𝐭𝐨 𝐜𝐡𝐞𝐜𝐤 𝐭𝐡𝐞 𝐛𝐨𝐭*\n\n*https://chat.whatsapp.com/GAOhr0qNK7KEvJwbenGivZ*\n\n*𝐂𝐫𝐞𝐚𝐭𝐞𝐫 𝐧𝐨𝐭𝐞* :-\n\n*𝐒𝐩𝐞𝐜𝐢𝐚𝐥 𝐭𝐡𝐚𝐧𝐤𝐬 𝐭𝐨 𝐦𝐲 𝐭𝐰𝐨 𝐬𝐢𝐬𝐭𝐞𝐫𝐬 𝐋𝐀𝐊𝐒𝐇𝐈 & 𝐑𝐔𝐊𝐒𝐇𝐀𝐍𝐈* ❤️❤️`
 await conn.sendPresenceUpdate('recording', from);
 await conn.sendMessage(from, { audio: { url: "https://github.com/Dark-Robin/Bot-Helper/raw/refs/heads/main/autovoice/I%20love%20you.mp3" }, mimetype: 'audio/mpeg', ptt: true }, { quoted: mek });
 await conn.sendMessage(from,{image: {url: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/Bot%20robin%20create.jpg"},caption:madeOwner},{quoted: mek})
