@@ -2,7 +2,7 @@ const { cmd, commands } = require('../command');
 const getFBInfo = require("@xaviabot/fb-downloader");
 
 cmd({
-    pattern: "fbvideo",
+    pattern: "fb",
     desc: "Download Facebook Video",
     category: "download",
     filename: __filename
@@ -22,7 +22,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         // Fetch video details
         reply("*Fetching video details...* 🌚❤️");
 
-        const result = await facebook(q);
+        const result = await getFBInfo(q);
 
         if (!result || (!result.sd && !result.hd)) {
             return reply("*Failed to fetch video. Please try again later.* 🌚");
