@@ -1,5 +1,5 @@
 const { cmd, commands } = require('../command');
-const { facebook } = require('@mrnima/facebook-downloader');
+const getFBInfo = require("@xaviabot/fb-downloader");
 
 cmd({
     pattern: "fbvideo",
