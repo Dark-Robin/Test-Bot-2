@@ -21,6 +21,8 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
         // Fetch video details
         reply("*Fetching video details...* 🌚❤️");
+
+        // Use the downloader as a Promise-based function
         const videoDetails = await facebookDownloader(q);
 
         if (!videoDetails || (!videoDetails.sd && !videoDetails.hd)) {
