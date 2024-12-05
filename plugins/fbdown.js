@@ -1,5 +1,5 @@
 const { cmd, commands } = require('../command');
-const facebookDownloader = require('@mrnima/facebook-downloader');
+const { facebook } = require('@mrnima/facebook-downloader');
 
 cmd({
     pattern: "fbvideo",
@@ -15,23 +15,22 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         if (isReact) return;
         m.react("📹");
 
-        // Validate Facebook URL
+        // Validate the Facebook URL format
         const fbRegex = /(https?:\/\/)?(www\.)?(facebook|fb)\.com\/.+/;
         if (!fbRegex.test(q)) return reply("*Invalid Facebook URL! Please check and try again.* 🌚");
 
         // Fetch video details
         reply("*Fetching video details...* 🌚❤️");
 
-        // Use the downloader as a Promise-based function
-        const videoDetails = await facebookDownloader(q);
+        const result = await facebook(q);
 
-        if (!videoDetails || (!videoDetails.sd && !videoDetails.hd)) {
+        if (!result || (!result.sd && !result.hd)) {
             return reply("*Failed to fetch video. Please try again later.* 🌚");
         }
 
-        const { title, sd, hd } = videoDetails;
+        const { title, sd, hd } = result;
 
-        // Prepare and send the message
+        // Prepare and send the message with video details
         let desc = `
 *❤️ ROBIN FB VIDEO DOWNLOADER ❤️*
 
@@ -42,7 +41,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         `;
         await conn.sendMessage(from, { text: desc }, { quoted: mek });
 
-        // Send the video
+        // Send the video if available
         if (hd) {
             await conn.sendMessage(from, { video: { url: hd }, caption: "HD Video 🌚❤️" }, { quoted: mek });
         } else if (sd) {
