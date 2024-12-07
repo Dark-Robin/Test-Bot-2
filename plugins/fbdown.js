@@ -39,7 +39,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
 𝐌𝐚𝐝𝐞 𝐛𝐲 𝐒_𝐈_𝐇_𝐈_𝐋_𝐄_𝐋
         `;
-await conn.sendMessage(from,{image: {url: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/Bot%20robin%20create.jpg"},caption: desc},{quoted: mek})
+await conn.sendMessage(from,{image: {url: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/Bot%20fb.jpg"},caption: desc},{quoted: mek})
         // Send the video if available
         if (hd) {
             await conn.sendMessage(from, { video: { url: hd }, caption: "-----HD VIDEO-----"}, { quoted: mek });
