@@ -5,7 +5,7 @@ const {runtime} = require('../lib/functions')
 
 cmd({
     pattern: "system",
-    alias: ["status","botinfo"],
+    alias: ["status","botinfo","ping"],
     desc: "system info",
     category: "main",
     filename: __filename
