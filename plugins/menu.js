@@ -34,12 +34,13 @@ let madeMenu = `👋 *Hello  ${pushname}*
 | *MAIN COMMANDS* |
     ▫️.alive
     ▫️.menu
-    ▫️.ai {text}
+    ▫️.ai <text>
     ▫️.system
     ▫️.owner
 | *DOWNLOAD COMMANDS* |
-    ▫️.song {text}
-    ▫️.video {text}
+    ▫️.song <text>
+    ▫️.video <text>
+    ▫️.fb <link>
 | *GROUP COMMANDS* |
 ${menu.group}
 | *OWNER COMMANDS* |
