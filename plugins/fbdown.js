@@ -20,12 +20,12 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         if (!fbRegex.test(q)) return reply("*Invalid Facebook URL! Please check and try again.* 🌚");
 
         // Fetch video details
-        reply("*Fetching video details...* 🌚❤️");
+        reply("*Downloading your video...* 🌚❤️");
 
         const result = await getFbVideoInfo(q);
 
         if (!result || (!result.sd && !result.hd)) {
-            return reply("*Failed to fetch video. Please try again later.* 🌚");
+            return reply("*Failed to download video. Please try again later.* 🌚");
         }
 
         const { title, sd, hd } = result;
