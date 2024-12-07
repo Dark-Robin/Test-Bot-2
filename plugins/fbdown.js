@@ -39,13 +39,12 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
 𝐌𝐚𝐝𝐞 𝐛𝐲 𝐒_𝐈_𝐇_𝐈_𝐋_𝐄_𝐋
         `;
-        await conn.sendMessage(from, { text: desc }, { quoted: mek });
 
         // Send the video if available
         if (hd) {
-            await conn.sendMessage(from, { video: { url: hd }, caption: "HD Video 🌚❤️" }, { quoted: mek });
+            await conn.sendMessage(from, { video: { url: hd }, caption: desc}, { quoted: mek });
         } else if (sd) {
-            await conn.sendMessage(from, { video: { url: sd }, caption: "SD Video 🌚❤️" }, { quoted: mek });
+            await conn.sendMessage(from, { video: { url: sd }, caption: desc}, { quoted: mek });
         } else {
             return reply("*No downloadable video found!* 🌚");
         }
