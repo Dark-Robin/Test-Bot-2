@@ -16,7 +16,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         m.react("📹");
 
         // Validate the TikTok URL format
-        const tiktokRegex = /https:\/\/(www\.)?tiktok\.com\/.+/;
+        const tiktokRegex = /https:\/\/(vt\.)?tiktok\.com\/.+/;
         if (!tiktokRegex.test(q)) return reply("*Invalid TikTok URL! Please check and try again.* 🌚");
 
         // Fetch video details
