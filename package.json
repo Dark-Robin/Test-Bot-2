@@ -28,7 +28,6 @@
     "@mrnima/facebook-downloader": "1.0.0",
     "fb-downloader-scrapper": "2.0.0",
     "@xct007/tiktok-scraper": "1.0.2",
-    "mrnima-moviedl": "1.0.0",
-    "@blackamda/telegram-image-url": "1.0.0"
+    "mrnima-moviedl": "1.0.0"
   }
 }
