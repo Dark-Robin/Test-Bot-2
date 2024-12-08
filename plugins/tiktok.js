@@ -27,7 +27,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             keys: ["video_url", "author", "desc_language"] // Customize the keys as needed
         };
 
-        const result = await Tiktok(q, options);
+        const result = await Tiktok.default ? Tiktok.default(q, options) : Tiktok(q, options);
 
         if (!result || !result.video_url) {
             return reply("*Failed to download video. Please try again later.* 🌚");
