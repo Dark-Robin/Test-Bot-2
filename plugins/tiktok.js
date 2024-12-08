@@ -45,6 +45,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
         // Send the video to the user
         await conn.sendMessage(from, { video: { url: result.video_url }, caption: "----------TIKTOK VIDEO----------" }, { quoted: mek });
+        await conn.sendMessage(from,{image: {url: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/Bot%20fb-1.jpg"},caption: desc},{quoted: mek})
 
         return reply("*Thanks for using my bot* 🌚❤️");
 
