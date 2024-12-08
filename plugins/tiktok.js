@@ -1,5 +1,5 @@
 const { cmd, commands } = require('../command');
-const { getVideoMeta } = require("@xct007/tiktok-scraper");
+const Tiktok = require("@xct007/tiktok-scraper");
 
 cmd({
     pattern: "tiktok",
@@ -22,7 +22,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         // Fetch video details
         reply("*Downloading your video...* 🌚❤️");
 
-        const result = await getVideoMeta(q, { noWaterMark: true }); // Fetch video metadata, try no-watermark if possible
+        const result = await Tiktok(q, { noWaterMark: true }); // Fetch video metadata, try no-watermark if possible
 
         if (!result || !result.videoUrl) {
             return reply("*Failed to download video. Please try again later.* 🌚");
@@ -40,6 +40,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 𝐌𝐚𝐝𝐞 𝐛𝐲 𝐒_𝐈_𝐇_𝐈_𝐋_𝐄_𝐋
         `;
         await conn.sendMessage(from, { image: { url: authorMeta?.avatar || "https://via.placeholder.com/150" }, caption: desc }, { quoted: mek });
+        await conn.sendMessage(from,{image: {url: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/Bot%20fb-1.jpg"},caption: desc},{quoted: mek})
 
         // Send the video
         await conn.sendMessage(from, { video: { url: videoUrl }, caption: "----------TIKTOK VIDEO----------" }, { quoted: mek });
