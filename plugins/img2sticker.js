@@ -4,6 +4,7 @@ const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter')
 
 cmd({
     pattern: "sticker",
+    alias: ["s","stick"],
     desc: "Convert an image to a sticker",
     category: "utility",
     filename: __filename
