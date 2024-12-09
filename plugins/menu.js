@@ -50,6 +50,7 @@ ${menu.group}
     ▫️.sticker <reply img>
     ▫️.img <reply sticker>
     ▫️.tr <lang><text>
+    ▫️.tts <text>
 | *SEARCH COMMANDS* |
 ${menu.search}
 
