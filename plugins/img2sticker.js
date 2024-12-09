@@ -1,7 +1,7 @@
 const { cmd, commands } = require('../command');
 const { writeFileSync } = require('fs');
 const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter');
-const { proto, downloadContentFromMessage, getContentType } = require('@whiskeysockets/baileys')
+const { downloadContentFromMessage, getContentType } = require('@whiskeysockets/baileys')
 
 cmd({
     pattern: "sticker",
@@ -12,9 +12,11 @@ cmd({
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
+        console.log("Quoted Message:", quoted);
          // Ensure the quoted message contains media
-        if (!quoted) return reply("Please reply to an image or GIF to convert it to a sticker.");
         const messageType = getContentType(quoted.message);
+        console.log("Content Type:", messageType);
+        
         if (!['imageMessage', 'videoMessage'].includes(messageType)) {
             return reply("The replied message must be an image or video.");
         }
