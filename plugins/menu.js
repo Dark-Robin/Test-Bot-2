@@ -48,6 +48,7 @@ ${menu.group}
     ▫️.update
 | *CONVERT COMMANDS* |
     ▫️.s <reply img>
+    ▫️.img <reply sticker>
 | *SEARCH COMMANDS* |
 ${menu.search}
 
