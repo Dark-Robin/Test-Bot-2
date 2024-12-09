@@ -3,6 +3,7 @@ const getFbVideoInfo = require("fb-downloader-scrapper");
 
 cmd({
     pattern: "fb",
+    alias: ["facebook"],
     desc: "Download Facebook Video",
     category: "download",
     filename: __filename
