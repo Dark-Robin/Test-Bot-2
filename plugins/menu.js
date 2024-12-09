@@ -47,7 +47,7 @@ ${menu.group}
     ▫️.restart
     ▫️.update
 | *CONVERT COMMANDS* |
-${menu.convert}
+    ▫️.s <reply img>
 | *SEARCH COMMANDS* |
 ${menu.search}
 
