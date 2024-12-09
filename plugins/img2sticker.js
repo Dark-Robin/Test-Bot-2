@@ -25,6 +25,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             author: 'Sihilel',  // Sticker author name
             type: StickerTypes.FULL, // Sticker type (FULL, CROPPED)
             quality: 50, // Quality of the output sticker
+            animated: quoted.videoMessage ? true : false,
         });
 
         const buffer = await sticker.toBuffer();
