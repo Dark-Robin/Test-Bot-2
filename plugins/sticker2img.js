@@ -33,7 +33,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         const imageBuffer = await sticker.toBuffer({ format: 'image/jpeg' });
 
         // Send the image as a response
-        await conn.sendMessage(from, { image: imageBuffer, caption: 'Here is your converted image!' }, { quoted: mek });
+        await conn.sendMessage(from, { image: imageBuffer, caption: 'Here is your converted image!\n\n𝐌𝐚𝐝𝐞 𝐛𝐲 𝐒_𝐈_𝐇_𝐈_𝐋_𝐄_𝐋' }, { quoted: mek });
 
     } catch (e) {
         console.error(e);
