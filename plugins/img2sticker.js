@@ -1,5 +1,4 @@
 const { cmd, commands } = require('../command');
-const { writeFileSync } = require('fs');
 const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter');
 const { downloadContentFromMessage, getContentType } = require('@whiskeysockets/baileys')
 
