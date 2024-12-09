@@ -28,6 +28,7 @@
     "fb-downloader-scrapper": "2.0.0",
     "@xct007/tiktok-scraper": "1.0.2",
     "wa-sticker-formatter": "4.4.4",
-    "google-translate-api-x": "10.7.1"
+    "google-translate-api-x": "10.7.1",
+    "gtts": "0.2.1"
   }
 }
