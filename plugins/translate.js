@@ -1,5 +1,5 @@
 const { cmd } = require('../command');
-const translate = require('@vitalets/google-translate-api');
+const translate = require('google-translate-api-x');
 
 cmd({
     pattern: "translate",
