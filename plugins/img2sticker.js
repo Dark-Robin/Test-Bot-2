@@ -9,7 +9,7 @@ cmd({
     category: "utility",
     filename: __filename
 },
-async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, reply }) => {
+async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
         // Check if a media file is quoted
         if (!m.hasMedia) return reply("Please reply to an image or GIF to convert it to a sticker.");
