@@ -19,10 +19,10 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, rep
 
         // Create sticker
         const sticker = new Sticker(media, {
-            pack: 'Bot Stickers', // Sticker pack name
-            author: 'Your Bot',  // Sticker author name
+            pack: 'Robin', // Sticker pack name
+            author: 'Sihilel',  // Sticker author name
             type: StickerTypes.FULL, // Sticker type (FULL, CROPPED)
-            quality: 80, // Quality of the output sticker
+            quality: 50, // Quality of the output sticker
         });
 
         const buffer = await sticker.toBuffer();
