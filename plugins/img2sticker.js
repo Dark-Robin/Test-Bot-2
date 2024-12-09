@@ -22,8 +22,8 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
         // Create the sticker from the media
         const sticker = new Sticker(media, {
-            pack: '', // Sticker pack name
-            author: 'Sihilel', // Sticker author name
+            pack: '𝐑_𝐎_𝐁_𝐈_𝐍', // Sticker pack name
+            author: '𝐒_𝐈_𝐇_𝐈_𝐋_𝐄_𝐋', // Sticker author name
             type: StickerTypes.FULL, // Sticker type (FULL or CROPPED)
             quality: 50, // Quality of the output sticker (0–100)
         });
