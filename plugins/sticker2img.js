@@ -23,8 +23,8 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
         // Convert the sticker buffer to an image (using Sticker class)
         const sticker = new Sticker(stickerBuffer, {
-            pack: 'Converted_Stickers',
-            author: 'Bot_User',
+            pack: '𝐑_𝐎_𝐁_𝐈_𝐍',
+            author: '𝐒_𝐈_𝐇_𝐈_𝐋_𝐄_𝐋',
             type: 'FULL', // This may not be needed, but ensures we're using the full sticker format
             quality: 100, // Quality of the output image (0-100)
         });
