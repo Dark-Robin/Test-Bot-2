@@ -26,6 +26,6 @@ async (conn, mek, m, { from, quoted, body, args, reply }) => {
         reply(`*Translated to ${targetLang.toUpperCase()}*\n\n${result.text}`);
     } catch (e) {
         console.error(e);
-        reply("Error: Unable to translate the text. Please check the language code or try again later.");
+        reply(`Error: ${e.message || "Something went wrong. Please try again later."}`);
     }
 });
