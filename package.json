@@ -27,6 +27,6 @@
     "mongoose": "8.8.3",
     "fb-downloader-scrapper": "2.0.0",
     "@xct007/tiktok-scraper": "1.0.2",
-    "mrnima-moviedl": "1.0.0"
+    "wa-sticker-formatter": "4.4.4"
   }
 }
