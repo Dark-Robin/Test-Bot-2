@@ -14,24 +14,27 @@ async (conn, mek, m, { from, args, reply }) => {
     try {
         // Check if text is provided
         if (!args.length) {
-            return reply("Please provide the text to convert to voice. Example: .tts Hello, how are you?");
+            return reply("Please provide the text to convert to voice. Example: !tts Hello, how are you?");
         }
 
         // Get text and language code
         const text = args.join(" ");
         const lang = "en"; // Default language, you can make this dynamic if needed
 
-        // Convert text to voice
-        const gtts = new gTTS(text, lang);
-        const filePath = path.join(__dirname, '../temp', `tts_${Date.now()}.mp3`);
+        // Temporary file path
+        const tempDir = path.join(__dirname, '../temp');
+        if (!fs.existsSync(tempDir)) fs.mkdirSync(tempDir); // Ensure temp directory exists
+        const filePath = path.join(tempDir, `tts_${Date.now()}.mp3`);
 
+        // Convert text to speech
+        const gtts = new gTTS(text, lang);
         gtts.save(filePath, async (err) => {
             if (err) {
                 console.error("Error generating TTS:", err);
                 return reply("Error: Unable to generate voice. Please try again.");
             }
 
-            // Send the generated voice file
+            // Read and send the audio file
             const audioBuffer = fs.readFileSync(filePath);
             await conn.sendMessage(from, { audio: audioBuffer, mimetype: 'audio/mpeg', ptt: true }, { quoted: mek });
 
@@ -39,7 +42,7 @@ async (conn, mek, m, { from, args, reply }) => {
             fs.unlinkSync(filePath);
         });
     } catch (e) {
-        console.error(e);
+        console.error("Error in TTS plugin:", e);
         reply(`Error: ${e.message || "An unexpected error occurred."}`);
     }
 });
