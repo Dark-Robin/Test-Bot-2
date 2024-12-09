@@ -14,6 +14,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         // Check if a media file is quoted
         if (!quoted || !(quoted.imageMessage || quoted.videoMessage)) {
             return reply("Please reply to an image or GIF to convert it to a sticker.");
+        }
 
         const media = await conn.downloadMediaMessage(quoted);
         if (!media) return reply("Failed to download the media. Try again!");
