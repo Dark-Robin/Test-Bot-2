@@ -1,5 +1,4 @@
-const { cmd } = require('../command');
-const fetch = require('node-fetch');
+const axios = require('axios');
 
 cmd({
     pattern: "relatedapps",
@@ -15,12 +14,10 @@ async (conn, mek, m, { from, body, reply }) => {
             return reply("Please type the name of the app to search for related apps.");
         }
 
-        // Use Google Play Store's search URL
         const url = `https://play.google.com/store/search?q=${encodeURIComponent(query)}&c=apps`;
-        const response = await fetch(url);
-        const html = await response.text();
+        const response = await axios.get(url);
+        const html = response.data;
 
-        // Extract app titles and URLs from the search results
         const regex = /<a[^>]*?href="\/store\/apps\/details\?id=([^"]+)"[^>]*?aria-hidden="true"[^>]*?>(.*?)<\/a>/g;
         let match;
         const apps = [];
@@ -28,10 +25,9 @@ async (conn, mek, m, { from, body, reply }) => {
             const appId = match[1];
             const appName = match[2].replace(/<\/?[^>]+(>|$)/g, ""); // Strip HTML tags
             apps.push({ title: appName, url: `https://play.google.com/store/apps/details?id=${appId}` });
-            if (apps.length >= 5) break; // Limit to 5 results
+            if (apps.length >= 5) break;
         }
 
-        // Prepare the response
         if (apps.length === 0) {
             return reply("No related apps found.");
         }
@@ -47,3 +43,4 @@ async (conn, mek, m, { from, body, reply }) => {
         reply("Error occurred while fetching related apps. Please try again later.");
     }
 });
+
