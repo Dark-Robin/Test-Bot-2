@@ -13,9 +13,9 @@ const config = await readEnv();
 const isReact = m.message.reactionMessage ? true : false
 if(isReact) return 
 m.react("🤩")
-    await conn.sendMessage(from, { text: '💻 *HACK STARTING...* 💻'  }, { quoted: m });
+    reply ("💻 *HACK STARTING...* 💻");
     await conn.sendMessage(from, { text: ''  }, { quoted: m });
-    await conn.sendMessage(from, { text: '*Initializing hacking tools...* 🛠️'  }, { quoted: m });
+    reply ("*Initializing hacking tools...* 🛠️");
     await conn.sendMessage(from, { text: '*Connecting to remote servers...* 🌐'  }, { quoted: m });
     await conn.sendMessage(from, { text: ''  }, { quoted: m });
     await conn.sendMessage(from, { text: '*[█] 10%* ⏳'  }, { quoted: m });
@@ -36,11 +36,11 @@ m.react("🤩")
     await conn.sendMessage(from, { text: '🕵️‍♂️ *Ensuring stealth...* 🤫'  }, { quoted: m });
     await conn.sendMessage(from, { text: '🔧 *Finalizing operations...* 🏁'  }, { quoted: m });
     reply ("🔧 *ROBIN Get Your All Data...* 🎁");
-    reply ("");
+    await conn.sendMessage(from, { text: ''  }, { quoted: m });
     reply ("⚠️ Note: All actions are for demonstration purposes only.");
     reply ("⚠️ Reminder: Ethical hacking is the only way to ensure security.");
     reply ("⚠️ Reminder: Strong hacking is the only way to ensure security.");
-    reply ("");
+    await conn.sendMessage(from, { text: ''  }, { quoted: m });
     reply ("🥶 *ROBIN Hacking Completed* 🥶");
 
 
