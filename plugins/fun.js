@@ -13,7 +13,9 @@ const config = await readEnv();
 const isReact = m.message.reactionMessage ? true : false
 if(isReact) return 
 m.react("🤩")
-await conn.sendMessage(from, { text: '💻 HACK STARTING... 💻'  }, { quoted: m });
+    await conn.sendMessage(from, { text: '💻 HACK STARTING... 💻'  }, { quoted: m });
+    await conn.sendMessage(from, { text: ''  }, { quoted: m });
+
 
   
 }catch(e){
