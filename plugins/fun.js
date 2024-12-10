@@ -35,13 +35,13 @@ m.react("🤩")
     await conn.sendMessage(from, { text: '📡 *Transmitting data...* 📤'  }, { quoted: m });
     await conn.sendMessage(from, { text: '🕵️‍♂️ *Ensuring stealth...* 🤫'  }, { quoted: m });
     await conn.sendMessage(from, { text: '🔧 *Finalizing operations...* 🏁'  }, { quoted: m });
-    await conn.sendMessage(from, { text: '🔧 *ROBIN Get Your All Data...* 🎁'  }, { quoted: m });
-    await conn.sendMessage(from, { text: ''  }, { quoted: m });
-    await conn.sendMessage(from, { text: '⚠️ Note: All actions are for demonstration purposes only.'  }, { quoted: m });
-    await conn.sendMessage(from, { text: '⚠️ Reminder: Ethical hacking is the only way to ensure security.'  }, { quoted: m });
-    await conn.sendMessage(from, { text: '⚠️ Reminder: Strong hacking is the only way to ensure security.'  }, { quoted: m });
-    await conn.sendMessage(from, { text: ''  }, { quoted: m });
-    await conn.sendMessage(from, { text: '🥶 *ROBIN Hacking Completed* 🥶'  }, { quoted: m });
+    reply ("🔧 *ROBIN Get Your All Data...* 🎁");
+    reply ("");
+    reply ("⚠️ Note: All actions are for demonstration purposes only.");
+    reply ("⚠️ Reminder: Ethical hacking is the only way to ensure security.");
+    reply ("⚠️ Reminder: Strong hacking is the only way to ensure security.");
+    reply ("");
+    reply ("🥶 *ROBIN Hacking Completed* 🥶");
 
 
   
