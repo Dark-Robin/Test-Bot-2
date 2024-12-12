@@ -13,7 +13,7 @@ async (conn, mek, m, { from, args, reply }) => {
     try {
         // Ensure there's at least one logo type and text argument
         if (args.length < 2) {
-            return reply("Usage: .logo <type> <text>\nExample: .logo wolf MyText");
+            return reply("Usage: .logo <type> <text>\nExample: .logo wolf ROBIN");
         }
 
         const type = args[0].toLowerCase(); // Logo type
@@ -32,7 +32,7 @@ async (conn, mek, m, { from, args, reply }) => {
                 bg: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/winter.jpg", 
                 color: "#0db6d4", 
                 font: "bold 80px Impact", 
-                valign: "middle", 
+                valign: "bottom", 
                 align: "center"
             },
             fire: { 
@@ -44,9 +44,9 @@ async (conn, mek, m, { from, args, reply }) => {
             },
             winter1: { 
                 bg: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/winter1.jpg", 
-                color: "lime", 
+                color: "#0db6d4", 
                 font: "bold 80px Impact", 
-                valign: "middle", 
+                valign: "bottom", 
                 align: "center"
             },
             galaxy: { 
