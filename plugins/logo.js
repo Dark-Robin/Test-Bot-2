@@ -11,6 +11,7 @@ cmd({
 },
 async (conn, mek, m, { from, args, reply }) => {
     try {
+        // Ensure there's at least one logo type and text argument
         if (args.length < 2) {
             return reply("Usage: .logo <type> <text>\nExample: .logo wolf MyText");
         }
@@ -20,32 +21,71 @@ async (conn, mek, m, { from, args, reply }) => {
 
         // Define logo types and styles
         const logoTypes = {
-            wolf: { bg: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/wolflogo.jpg", color: "white", font: "bold 80px Arial", valign: "bottom", align: "center" },
-            winter: { bg: "winter.jpg", color: "blue", font: "italic 50px Georgia" },
-            fire: { bg: "fire.jpg", color: "red", font: "bold 70px Impact" },
-            neon: { bg: "neon.jpg", color: "lime", font: "bold 65px 'Comic Sans MS'" },
-            galaxy: { bg: "galaxy.jpg", color: "violet", font: "bold 55px Tahoma" },
+            wolf: { 
+                bg: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/wolflogo.jpg", 
+                color: "white", 
+                font: "bold 80px Arial", 
+                valign: "bottom", // Correctly setting default vertical alignment
+                align: "center"
+            },
+            winter: { 
+                bg: "winter.jpg", 
+                color: "blue", 
+                font: "italic 50px Georgia", 
+                valign: "middle", 
+                align: "center"
+            },
+            fire: { 
+                bg: "fire.jpg", 
+                color: "red", 
+                font: "bold 70px Impact", 
+                valign: "middle", 
+                align: "center"
+            },
+            neon: { 
+                bg: "neon.jpg", 
+                color: "lime", 
+                font: "bold 65px 'Comic Sans MS'", 
+                valign: "middle", 
+                align: "center"
+            },
+            galaxy: { 
+                bg: "galaxy.jpg", 
+                color: "violet", 
+                font: "bold 55px Tahoma", 
+                valign: "middle", 
+                align: "center"
+            },
         };
 
+        // Check if the logo type is valid
         if (!logoTypes[type]) {
             return reply(`Invalid logo type. Available types: ${Object.keys(logoTypes).join(", ")}`);
         }
 
-        const { bg, color, font } = logoTypes[type];
+        const { bg, color, font, valign = "middle", align } = logoTypes[type]; // Default valign to 'middle'
 
-        // Load background image from URL directly
-        const background = await loadImage(bg);  // bg can be a URL
+        // Load the background image
+        let background;
+        try {
+            background = await loadImage(bg);
+        } catch (err) {
+            return reply(`Error loading image: ${bg}. Please check the image URL.`);
+        }
+
+        // Create canvas with background dimensions
         const canvas = createCanvas(background.width, background.height);
         const ctx = canvas.getContext("2d");
 
-        // Draw background
+        // Draw the background on the canvas
         ctx.drawImage(background, 0, 0);
 
-        // Draw text
+        // Set text properties
         ctx.fillStyle = color;
         ctx.font = font;
-        ctx.textAlign = "center";
+        ctx.textAlign = align; // Align the text horizontally (left, center, right)
 
+        // Set vertical text alignment (default to 'middle' if valign is not defined)
         let yPosition;
         if (valign === "bottom") {
             yPosition = canvas.height - 50;
@@ -58,8 +98,10 @@ async (conn, mek, m, { from, args, reply }) => {
         // Draw the text on the canvas
         ctx.fillText(text, canvas.width / 2, yPosition);
 
-        // Send the generated image
+        // Convert the canvas to an image buffer
         const buffer = canvas.toBuffer();
+
+        // Send the generated logo as an image
         await conn.sendMessage(from, { image: buffer, caption: `Here is your ${type} logo!` }, { quoted: mek });
 
     } catch (error) {
