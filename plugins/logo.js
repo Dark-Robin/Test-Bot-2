@@ -32,10 +32,9 @@ async (conn, mek, m, { from, args, reply }) => {
         }
 
         const { bg, color, font } = logoTypes[type];
-        const bgPath = path.join(__dirname, "../assets", bg);
 
-        // Load background image
-        const background = await loadImage(bgPath);
+        // Load background image from URL directly
+        const background = await loadImage(bg);  // bg can be a URL
         const canvas = createCanvas(background.width, background.height);
         const ctx = canvas.getContext("2d");
 
