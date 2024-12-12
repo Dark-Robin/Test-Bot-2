@@ -24,14 +24,14 @@ async (conn, mek, m, { from, args, reply }) => {
             wolf: { 
                 bg: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/wolflogo.jpg", 
                 color: "white", 
-                font: "bold 80px Arial", 
+                font: "bold 80px Impact", 
                 valign: "bottom", // Correctly setting default vertical alignment
                 align: "center"
             },
             winter: { 
                 bg: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/winter.jpg", 
-                color: "blue", 
-                font: "italic 80px Georgia", 
+                color: "#0db6d4", 
+                font: "italic 80px Impact", 
                 valign: "middle", 
                 align: "center"
             },
@@ -45,7 +45,7 @@ async (conn, mek, m, { from, args, reply }) => {
             winter1: { 
                 bg: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/winter1.jpg", 
                 color: "lime", 
-                font: "bold 65px 'Comic Sans MS'", 
+                font: "bold 80px Impact", 
                 valign: "middle", 
                 align: "center"
             },
