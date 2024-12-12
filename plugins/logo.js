@@ -31,7 +31,7 @@ async (conn, mek, m, { from, args, reply }) => {
             winter: { 
                 bg: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/winter.jpg", 
                 color: "#0db6d4", 
-                font: "italic 80px Impact", 
+                font: "bold 80px Impact", 
                 valign: "middle", 
                 align: "center"
             },
