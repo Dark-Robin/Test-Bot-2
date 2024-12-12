@@ -29,9 +29,9 @@ async (conn, mek, m, { from, args, reply }) => {
                 align: "center"
             },
             winter: { 
-                bg: "winter.jpg", 
+                bg: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/winter.jpg", 
                 color: "blue", 
-                font: "italic 50px Georgia", 
+                font: "italic 80px Georgia", 
                 valign: "middle", 
                 align: "center"
             },
@@ -42,8 +42,8 @@ async (conn, mek, m, { from, args, reply }) => {
                 valign: "middle", 
                 align: "center"
             },
-            neon: { 
-                bg: "neon.jpg", 
+            winter1: { 
+                bg: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/winter1.jpg", 
                 color: "lime", 
                 font: "bold 65px 'Comic Sans MS'", 
                 valign: "middle", 
