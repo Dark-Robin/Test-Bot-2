@@ -20,7 +20,7 @@ async (conn, mek, m, { from, args, reply }) => {
 
         // Define logo types and styles
         const logoTypes = {
-            wolf: { bg: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/wolflogo.jpg", color: "red", font: "bold 60px Arial", valign: "bottom", align: "center" },
+            wolf: { bg: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/wolflogo.jpg", color: "red", font: "bold", valign: "bottom", align: "center" },
             winter: { bg: "winter.jpg", color: "blue", font: "italic 50px Georgia" },
             fire: { bg: "fire.jpg", color: "red", font: "bold 70px Impact" },
             neon: { bg: "neon.jpg", color: "lime", font: "bold 65px 'Comic Sans MS'" },
