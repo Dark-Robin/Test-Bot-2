@@ -46,11 +46,17 @@ async (conn, mek, m, { from, args, reply }) => {
         ctx.font = font;
         ctx.textAlign = "center";
 
-         // Set vertical text alignment
-        let yPosition = valign === "bottom" ? canvas.height - 50 :
-                        valign === "top" ? 50 : canvas.height / 2;
-        
-        ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+        let yPosition;
+        if (valign === "bottom") {
+            yPosition = canvas.height - 50;
+        } else if (valign === "top") {
+            yPosition = 50;
+        } else {
+            yPosition = canvas.height / 2; // Default to middle alignment
+        }
+
+        // Draw the text on the canvas
+        ctx.fillText(text, canvas.width / 2, yPosition);
 
         // Send the generated image
         const buffer = canvas.toBuffer();
