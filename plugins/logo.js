@@ -102,7 +102,7 @@ async (conn, mek, m, { from, args, reply }) => {
         const buffer = canvas.toBuffer();
 
         // Send the generated logo as an image
-        await conn.sendMessage(from, { image: buffer, caption: `Here is your ${type} logo!` }, { quoted: mek });
+        await conn.sendMessage(from, { image: buffer, caption: `Here is your ${type} logo!\n\n𝐌𝐚𝐝𝐞 𝐛𝐲 𝐒_𝐈_𝐇_𝐈_𝐋_𝐄_𝐋` }, { quoted: mek });
 
     } catch (error) {
         console.error(error);
